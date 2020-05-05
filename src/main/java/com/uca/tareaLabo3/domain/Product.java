@@ -6,7 +6,9 @@ public class Product {
 	private String nombre;
 	private Integer cantidad;
 	
-	public Product() {  }
+	public Product() { 
+		
+	}
 	
 	public Product(Integer id, String nombre, Integer cantidad) {
 		super();
