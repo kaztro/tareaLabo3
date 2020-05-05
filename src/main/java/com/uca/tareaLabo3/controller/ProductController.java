@@ -15,7 +15,7 @@ public class ProductController {
 	
 private List<Product> products = new ArrayList<Product>();
 	
-	@GetMapping("/compra")
+	@GetMapping("/productos")
 	public ModelAndView compraProducto() {
 		ModelAndView mav = new ModelAndView();
 		
@@ -27,12 +27,12 @@ private List<Product> products = new ArrayList<Product>();
 		
 		mav.setViewName("productos");
 		mav.addObject("product", new Product());
-		mav.addObject("producto", products);
+		mav.addObject("productos", products);
 
 		return mav;	
 	}
 	
-	@PostMapping("/validator")
+	@PostMapping("/validar")
 	public ModelAndView validar(Product product) {
 		ModelAndView mav = new ModelAndView();
 		mav.addObject("product", products.get(product.getId()).getNombre());
